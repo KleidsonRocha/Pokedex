@@ -1,0 +1,11 @@
+.detailHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailPhoto {
+  display: flex;
+  justify-content: center;
+}
