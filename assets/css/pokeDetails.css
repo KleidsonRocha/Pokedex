@@ -1,0 +1,44 @@
+.pokemonHeight, .pokemonWeight{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pokemonType {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+
+.type {
+  padding:  0.5rem 2rem;
+  border-radius: 1rem;
+  border-radius: 20px;
+  box-shadow: 7px 7px 13px 0 rgba(50, 50, 50, 0.22);
+}
+
+.type:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.pokemonHeightWeight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.pokemonSize {
+  font-weight: bold;
+  margin: 0;
+}
+
+.pokemonSizeComplement {
+  color: gray;
+  font-size: large;
+  margin: 0;
+}
+

@@ -4,7 +4,7 @@ getDetail(pokemon)
 
 function ConvertApiDetailPokemonObject(pokeDetail) {
 
-    console.log(pokeDetail)
+    
     //falta criar o objeto certinho do pokemon
 
     const pokemon = new Pokemon()
@@ -13,11 +13,19 @@ function ConvertApiDetailPokemonObject(pokeDetail) {
 
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
     const [type] = types
-
     pokemon.types = types
     pokemon.type = type
 
+    const moves = pokeDetail.moves.map((moveSlot) => moveSlot.move.name)
+    const [move] = moves
+    pokemon.moves = moves
+    pokemon.move = move
+
+
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+
+    pokemon.height = pokeDetail.height
+    pokemon.weight = pokeDetail.weight
 
     return pokemon
 }
@@ -53,11 +61,27 @@ function convertToPageHtml(PokemonDetais) {
         <div>
         <h1>${PokemonDetais.name}</h1>
 
-        <div class="detail">
-            <ol class="types">
+        <div >
+            <ol class="pokemonType">
             ${PokemonDetais.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
             </ol>
         </div>
+        <div class="pokemonHeightWeight">
+            <ol class="pokemonHeight">
+            <h1 class="pokemonSize">${PokemonDetais.height} KG</h1>
+            <p class="pokemonSizeComplement">height</p>
+            </ol>
+            <ol class="pokemonWeight">
+            <h1 class="pokemonSize">${PokemonDetais.weight} M</h1>
+            <p  class="pokemonSizeComplement">weight</p>
+            </ol>
+        </div>
+        <div >
+            <ol >
+            ${PokemonDetais.moves.map((move) => `<li class="type ${move}">${move}</li>`).join('')}
+            </ol>
+        </div>
+        
     
     `;
 }
