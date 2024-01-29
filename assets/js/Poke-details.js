@@ -21,6 +21,19 @@ function ConvertApiDetailPokemonObject(pokeDetail) {
     pokemon.moves = moves
     pokemon.move = move
 
+    pokemon.hp = pokeDetail.stats[0].base_stat
+
+    pokemon.experience = pokeDetail.base_experience
+
+    pokemon.atack = pokeDetail.stats[1].base_stat
+
+    pokemon.defence = pokeDetail.stats[2].base_stat
+
+    pokemon.spatack = pokeDetail.stats[3].base_stat
+
+    pokemon.spdefence = pokeDetail.stats[4].base_stat
+
+    pokemon.speed = pokeDetail.stats[5].base_stat
 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
@@ -60,7 +73,10 @@ function convertToPageHtml(PokemonDetais) {
         </div>
         <div>
         <h1>${PokemonDetais.name}</h1>
-
+        <div class="pokeInfo">
+            <h2 class="pokemonInfo">HP${PokemonDetais.hp}/${PokemonDetais.hp}</h2>
+            <h2 class="pokemonInfo">EXP${PokemonDetais.experience}</h2>
+        </div>
         <div >
             <ol class="pokemonType">
             ${PokemonDetais.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
@@ -76,13 +92,33 @@ function convertToPageHtml(PokemonDetais) {
             <p  class="pokemonSizeComplement">weight</p>
             </ol>
         </div>
-        <div >
-            <ol >
-            ${PokemonDetais.moves.map((move) => `<li class="type ${move}">${move}</li>`).join('')}
+            <h1>Base Stats</h1>
+            <ol class="pokemonStats">
+                <h1>HP:</h1>
+                <h2 class="pokemonstat">${PokemonDetais.hp}</h2>
             </ol>
+            <ol class="pokemonStats">
+                <h1>Atack:</h1>
+                <h2 class="pokemonstat">${PokemonDetais.atack}</h2>
+            </ol>
+            <ol class="pokemonStats">
+                <h1>Defence:</h1>
+                <h2 class="pokemonstat">${PokemonDetais.defence}</h2>
+            </ol>
+            <ol class="pokemonStats">
+                <h1>SPAtack:</h1>
+                <h2 class="pokemonstat">${PokemonDetais.spatack}</h2>
+            </ol>
+            <ol class="pokemonStats">
+                <h1>SPDefence</h1>
+                <h2 class="pokemonstat">${PokemonDetais.spdefence}</h2>
+            </ol>
+            <ol class="pokemonStats">
+                <h1>Speed</h1>
+                <h2 class="pokemonstat">${PokemonDetais.speed}</h2>
+            </ol>
+        <div>
         </div>
-        
-    
     `;
 }
 
