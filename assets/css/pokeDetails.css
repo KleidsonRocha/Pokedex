@@ -48,16 +48,29 @@
   justify-content: space-evenly;
 }
 
-.pokemonStats {
+.pokemonStat {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  
+}
+
+.pokemonStatBar{
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.pokemonStats {
+  display: flex;
+  flex-direction: column;
+
 }
 
 .pokemonInfo {
   color: white;
 }
 
-.pokemonstat{
+.pokemonStatName{
   color: gray;
   font-size: xx-large;
   margin: 0  0 0 1rem;

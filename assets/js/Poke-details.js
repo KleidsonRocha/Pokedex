@@ -71,54 +71,63 @@ function convertToPageHtml(PokemonDetais) {
               <img class="img" src="${PokemonDetais.photo}" alt="${PokemonDetais.name}">
             </section>      
         </div>
+
         <div>
-        <h1>${PokemonDetais.name}</h1>
-        <div class="pokeInfo">
-            <h2 class="pokemonInfo">HP${PokemonDetais.hp}/${PokemonDetais.hp}</h2>
-            <h2 class="pokemonInfo">EXP${PokemonDetais.experience}</h2>
+            <h1>${PokemonDetais.name}</h1>
+            <div class="pokeInfo">
+                <h2 class="pokemonInfo">HP${PokemonDetais.hp}/${PokemonDetais.hp}</h2>
+                <h2 class="pokemonInfo">EXP${PokemonDetais.experience}</h2>
+            </div>
+            <div >
+                <ol class="pokemonType">
+                ${PokemonDetais.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                </ol>
+            </div>
+            <div class="pokemonHeightWeight">
+                <ol class="pokemonHeight">
+                <h1 class="pokemonSize">${PokemonDetais.height} KG</h1>
+                <p class="pokemonSizeComplement">height</p>
+                </ol>
+                <ol class="pokemonWeight">
+                <h1 class="pokemonSize">${PokemonDetais.weight} M</h1>
+                <p  class="pokemonSizeComplement">weight</p>
+                </ol>
         </div>
-        <div >
-            <ol class="pokemonType">
-            ${PokemonDetais.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-            </ol>
-        </div>
-        <div class="pokemonHeightWeight">
-            <ol class="pokemonHeight">
-            <h1 class="pokemonSize">${PokemonDetais.height} KG</h1>
-            <p class="pokemonSizeComplement">height</p>
-            </ol>
-            <ol class="pokemonWeight">
-            <h1 class="pokemonSize">${PokemonDetais.weight} M</h1>
-            <p  class="pokemonSizeComplement">weight</p>
-            </ol>
-        </div>
+        
+        <ol class="pokemonStats">
             <h1>Base Stats</h1>
-            <ol class="pokemonStats">
+            <li class="pokemonStat">
                 <h1>HP:</h1>
-                <h2 class="pokemonstat">${PokemonDetais.hp}</h2>
-            </ol>
-            <ol class="pokemonStats">
+                <h2 class="pokemonStatName">${PokemonDetais.hp}</h2>
+                <progress class="pokemonStatBar" value="${PokemonDetais.hp}" max="250"></progress>
+            </li>
+            <li class="pokemonStat">
                 <h1>Atack:</h1>
-                <h2 class="pokemonstat">${PokemonDetais.atack}</h2>
-            </ol>
-            <ol class="pokemonStats">
+                <h2 class="pokemonStatName">${PokemonDetais.atack}</h2>
+                <progress class="pokemonStatBar" value="${PokemonDetais.atack}" max="250"></progress>
+            </li>
+            <li class="pokemonStat">
                 <h1>Defence:</h1>
-                <h2 class="pokemonstat">${PokemonDetais.defence}</h2>
-            </ol>
-            <ol class="pokemonStats">
+                <h2 class="pokemonStatName">${PokemonDetais.defence}</h2>
+                <progress class="pokemonStatBar" value="${PokemonDetais.defence}" max="250"></progress>
+            </li>
+            <li class="pokemonStat">
                 <h1>SPAtack:</h1>
-                <h2 class="pokemonstat">${PokemonDetais.spatack}</h2>
-            </ol>
-            <ol class="pokemonStats">
+                <h2 class="pokemonStatName">${PokemonDetais.spatack}</h2>
+                <progress class="pokemonStatBar" value="${PokemonDetais.spatack}" max="250"></progress>
+            </li>
+            <li class="pokemonStat">
                 <h1>SPDefence</h1>
-                <h2 class="pokemonstat">${PokemonDetais.spdefence}</h2>
-            </ol>
-            <ol class="pokemonStats">
+                <h2 class="pokemonStatName">${PokemonDetais.spdefence}</h2>
+                <progress class="pokemonStatBar" value="${PokemonDetais.spdefence}" max="250"></progress>
+            </li>
+            <li class="pokemonStat">
                 <h1>Speed</h1>
-                <h2 class="pokemonstat">${PokemonDetais.speed}</h2>
-            </ol>
-        <div>
-        </div>
+                <h2 class="pokemonStatName">${PokemonDetais.speed}</h2>
+                <progress class="pokemonStatBar" value="${PokemonDetais.speed}" max="250">kleidson</progress>
+            </li>
+        </ol>
+        
     `;
 }
 
