@@ -20,3 +20,22 @@ Desenvolver uma plataforma web para listagem e visualização de pokémons, para
 - [x] **Seção Sobre**: Dados básicos sobre o pokémon, como altura, peso, fraquezas.
 
 - [x] **Seção Estatísticas**: Pontos de batalha do pokémon, como vida, ataque, defesa, velocidade, especial ataque e especial defesa.
+
+## Informações
+
+- A aplicação permite explorar e visualizar informações sobre Pokémon de maneira fácil e intuitiva.
+- Listagem Paginada de Pokémon:
+- A página inicial exibe uma lista paginada de Pokémon.
+- Os botões de navegação permitem alternar entre as páginas.
+- Detalhes do Pokémon:
+- Clique em um Pokémon na lista para ver detalhes específicos.
+Os detalhes incluem o nome, tipo, habilidades e outras informações relevantes.
+
+## Configuração do Ambiente
+
+Certifique-se de ter um ambiente de desenvolvimento configurado com um servidor local, como o [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) para VS Code.
+
+## Inicialização
+ - git clone https://github.com/seu-usuario/pokemon-api-project.git
+ - cd pokemon-api-project
+ - inicialize o live-server na pasta do projeto
